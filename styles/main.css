@@ -455,9 +455,36 @@ footer a:hover {
 footer .footer-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(260px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 10px;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+@media (min-width: 800px) {
+  footer .footer-grid {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  footer .footer-grid {
+    justify-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 800px) {
+  footer .footer-grid .invite-copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 footer .social ul {
@@ -485,6 +512,7 @@ footer .logo-social {
 }
 
 footer .contacts {
+  padding: 0;
   font-size: 0.8rem;
   letter-spacing: 1px;
   font-weight: 300;
