@@ -15,6 +15,7 @@ body {
   width: 100%;
   position: relative;
   font-family: 'Public Sans', sans-serif;
+  min-width: 375px;
 }
 
 .container {
